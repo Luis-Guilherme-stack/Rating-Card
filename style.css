@@ -1,0 +1,152 @@
+:root {
+    --color-white: hsl(0, 100%, 100%);
+    --color-primary: hsl(25, 97%, 53%);
+    --color-base: hsl(216, 12%, 8%);
+    --color-variant: hsl(213, 19%, 18%);
+    --color-neutral: hsl(217, 12%, 63%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Overpass', Arial;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-variant)
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: min(90%, 22rem);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    background-color: var(--color-base)
+}
+
+/* RATING CARD STYLES*/
+
+.logo-container {
+    width: 100%;
+}
+
+.logo {
+    margin-bottom: 2rem;
+    background-color: var(--color-variant);
+    padding: 0.8rem;
+    border-radius: 50%;
+}
+
+.title {
+    color: var(--color-white);
+    margin-bottom: 1rem;
+}
+
+
+
+.text {
+    font-size: 15px;
+    color: var(--color-neutral);
+    line-height: 1.6;
+}
+
+.rating-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    gap: 0.4rem;
+    width: 100%;
+}
+
+.rating {
+    transition: 0.2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    list-style-type: none;
+    background-color: var(--color-variant);
+    border: none;
+    height: 3.2rem;
+    width: 3.2rem;
+    border-radius: 50%;
+}
+
+.rating:not(.clicked-button):hover {
+    background-color: var(--color-primary);
+}
+
+.container-button {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.clicked-button {
+    color: var(--color-base);
+    background-color: var(--color-white);
+}
+
+.submit-button {
+    cursor: pointer;
+    height: 3rem;
+    border: none;
+    border-radius: 100rem;
+    flex-grow: 1;
+    background-color: var(--color-primary);
+}
+
+.submit-button:active {
+    background-color: var(--color-white);
+}
+
+.error-msg {
+    margin-top: 0.6rem;
+    margin-left: 1rem;
+    color: rgb(179, 1, 1);
+    display: none;
+}
+/* THANKS CARD STYLE*/
+
+main.thanks {
+    align-items: center;
+}
+
+.text-container.thanks {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text.thanks {
+    text-align: center;
+}
+
+.label-container {
+    display: flex;
+}
+
+.label {
+    font-weight: 700;
+    margin-top: 1rem;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    background-color: var(--color-variant);
+    height: 2rem;
+    padding: 0 2rem;
+    flex-grow: 1;
+    font-size: 15px;
+    border-radius: 2rem;
+}
